@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mission2-multiply</title>
+</head>
+<body>
+    <!-- 텍스트안에 입력되는 숫자를 어떻게 (가져오는지)인식되게 하는지 잘 모르겠습니다
+        그래서 일단 입력값을 가져오는 prompt로 했습니다!
+    
+    순서를 생각해보자면,
+    'var a = 텍스트안에 입력되는 숫자' 라고 받아서 Number(a)로 숫자 변환시켜주고
+    for문 이용해서 1부터 Number(a)까지 곱하도록 하고싶습니다! -->
+
+
+    <input type="text" name="num">
+    
+    <!-- <button onclick="document.write(a+'!='+num)">실행</button>
+    <input type="button" value="실행" onclick="document.write(a+'!='+num)">
+    
+    질문!! button에서 onclick 이 무슨의미인지 잘 모르겠다 -->
+ 
+
+
+    <button onclick="num()">실행</button>
+    <script>
+        var a = prompt("숫자입력");
+        var number = Number(a)
+    function num(){
+        var output = 1;
+        for(var i = 1; i < number; i++){
+            output += output*i;
+            }
+        document.write(a+'!='+output);
+    }
+    // 질문!! for문 조건으로 왜 'i < number'여야 하는가? 'i <= number'(등호)는 안되는 이유??
+    
+    </script>
+
+
+
+</body>
+</html>
