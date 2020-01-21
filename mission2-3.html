@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mission2-3</title>
+    <style>
+        #ok{
+            border-radius : 5px;
+        }
+        #ok:hover{
+            color : white;
+            background-color:#ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>3의 배수의 개수 구하기</h1>
+    <input type = "number" id="num" placeholder="숫자를 입력하세요" value="">
+    <button onclick="onclick()" id="ok">확인</button>
+    <!-- <input type = "button" onclick="onclick()" value="확인"> -->
+    <div id="result"></div>    
+    <script>
+    var a = document.querySelector("#num").value;
+    // 왜 이게 안먹는 것 같지ㅠㅠ
+    var b = Number(a);
+    var c = document.querySelectoer("#result").innerText = "3의 배수의 개수 : ";
+    function onclick(){
+        if(b%3==0){
+            document.querySelectoer("#result").innerText = "3의 배수의 개수 : " + b/3;
+            // 이렇게 안하고
+        }else if(b%3==1){
+            c + (b-1)/3;
+            // 이렇게 해도 되나,,,?
+        }else{
+            document.querySelectoer("#result").innerText = "3의 배수의 개수 : " + Number(b-2)/3;
+            // 마지막에 Number 적어줘야하나,,,?
+        }
+    }
+    
+    
+   
+    </script>
+</body>
+</html>

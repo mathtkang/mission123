@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mission2-1</title>
+</head>
+<body>
+    <button onclick="num()">나이 계산하기</button>
+    <p id="year"></p>
+    <script>
+        function num(){
+            var ans = prompt("태어난 연도를 입력하세요.");
+        // 1-1)
+            var answer = Number(2020-ans+1)
+            document.getElementById("year").innerHTML = "당신의 나이는 "+answer+"살 입니다.";
+        // 1-2)
+            // var date = new Date(2020);
+            // document.getElementById("year").innerHTML = "당신의 나이는 "+date.getFullYear()-Number(ans)+1+"살 입니다.";
+        // date객체에 대해 자세하게 안배워서,,, 1-2는 잘 모르겠습니다ㅜ
+        }
+    
+    
+    
+    
+    </script>
+</body>
+</html>
