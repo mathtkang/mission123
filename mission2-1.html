@@ -16,6 +16,10 @@
             var answer = Number(2020-ans+1)
             document.getElementById("year").innerHTML = "당신의 나이는 "+answer+"살 입니다.";
         // 1-2)
+            var data = new Date() // 내장객체
+            console.log(data)
+            // 년: date.getFullYear() 년도만 가져옴
+            // 월: date.getMonth() 0부터 시작 - 1월 = 0월 / 가져온 것의 +1 해주기
             // var date = new Date(2020);
             // document.getElementById("year").innerHTML = "당신의 나이는 "+date.getFullYear()-Number(ans)+1+"살 입니다.";
         // date객체에 대해 자세하게 안배워서,,, 1-2는 잘 모르겠습니다ㅜ

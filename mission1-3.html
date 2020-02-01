@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mission3</title>
+</head>
+<body>
+    <!-- 
+        문제) toyRobot.showStock() 메소드를 호출해서 상품정보를 보여줘라
+     -->
+    <script>
+    // 질문!! 메소드, 함수 차이?
+    // 답변!! 메소드는 '객체안에 선언된 함수' 이다.
+
+        var toyRobot = {
+            productId : 123-12,
+            name : "Robot",
+            price : 25000,
+            madeIn : "Korea",
+            quantitly : 10,
+            showStock: function() {
+                document.write(toyRobot.name + "제품은 " + toyRobot.quantitly + "개 남아있습니다.");
+                // 여기서 우리는 showStock을 하나의 값이 아니라 함수로 보려고한다.
+                // 그럴때 이 함수(showStock)를 메소드라고 한다.
+            }
+        }
+        console.log(toyRobot.showStock());
+
+    </script>
+</body>
+</html>

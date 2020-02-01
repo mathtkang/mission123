@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>date문제</title>
+    <style>
+        div {
+            border:  1px solid gray;
+        }
+    </style> 
+</head>
+<body>    
+    <!-- 저희 3주차 수업은 2020-02-01 에 진행됩니다 -->
+    <!-- Date 객체를 활용해 div 태그에 '3주차 수업 예정: 2020년 2월 1일(토)' 와 같이 출력해보세요. -->
+    <!-- 단, 요일은 switch문을 사용해 표시합니다 -->
+    
+    <div id="div"></div>
+    <script>
+    var date = new Date('2020-02-01')
+    var year = date.getFullYear()
+    var month = date.getMonth()
+    var d = date.getDate()
+    var dd = date.getDay()
+    
+    var day;
+    switch(dd){
+        case 0 :
+            day = "일";
+        break;
+        case 1 :
+            day = "월";
+        break;
+        case 2 :
+            day = "화";
+        break;
+        case 3 :
+            day = "수";
+        break;
+        case 4 :
+            day = "목";
+        break;
+        case 5 :
+            day = "금";
+        break;
+        case 6 :
+            day = "토";
+        break;
+    }
+
+    document.getElementById("div").innerHTML = "3주차 수업 예정 : "+year+"년 "+(month+1)+"월 "+d+"일 ("+day+")"
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -18,29 +18,20 @@
 <body>
     <h1>3의 배수의 개수 구하기</h1>
     <input type = "number" id="num" placeholder="숫자를 입력하세요" value="">
-    <button onclick="onclick()" id="ok">확인</button>
-    <!-- <input type = "button" onclick="onclick()" value="확인"> -->
+    <button onclick="onclick2()" id="onclickButton">확인</button>
     <div id="result"></div>    
     <script>
-    var a = document.querySelector("#num").value;
-    // 왜 이게 안먹는 것 같지ㅠㅠ
-    var b = Number(a);
-    var c = document.querySelectoer("#result").innerText = "3의 배수의 개수 : ";
-    function onclick(){
-        if(b%3==0){
-            document.querySelectoer("#result").innerText = "3의 배수의 개수 : " + b/3;
-            // 이렇게 안하고
-        }else if(b%3==1){
-            c + (b-1)/3;
-            // 이렇게 해도 되나,,,?
+    function onclick2(){
+        var numValue = document.querySelector("#num").value;
+        var number = Number(numValue);
+        if(number%3==0){
+            document.querySelector("#result").innerText = "3의 배수의 개수 : " + number/3;
+        }else if(number%3==1){
+            document.getElementById("result").innerHTML = "3의 배수의 개수 : " + (number-1)/3;
         }else{
-            document.querySelectoer("#result").innerText = "3의 배수의 개수 : " + Number(b-2)/3;
-            // 마지막에 Number 적어줘야하나,,,?
+            document.getElementById("result").innerHTML = "3의 배수의 개수 : " + (number-2)/3;
         }
-    }
-    
-    
-   
+    }   
     </script>
 </body>
 </html>

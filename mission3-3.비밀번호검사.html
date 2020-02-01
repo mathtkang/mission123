@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>비밀번호검사</title>
+</head>
+<body>
+    <!-- 비밀번호는 1234 입니다. -->
+    <!-- 검사 버튼 클릭 시 input에 입력한 값이 비밀번호와 일치하는지 검사하는 기능을 구현하세요 -->
+    <!-- 단, 비교할때는 === (일치연산자) 를 사용합니다 -->
+    <input type="password" id="pw" value="">
+    <button onclick="c()">검사</button>
+    <script> 
+    // 비밀번호가 1234 로 일치하면 alert('성공')
+    // 일치하지 않으면 alert('비밀번호를 확인하세요.')
+    // 입력한 값이 없으면 alert('비밀번호를 입력하세요.')
+    
+    function c(){
+        var a = document.querySelector("#pw").value
+        var num = Number(a) 
+        // if(num==1234){
+        //     alert("asdf") 
+        // }
+        if(num===1234){
+            alert('성공')
+        }else if(!num){ 
+//질문) num===null 은 왜 안되나요?
+            alert('비밀번호를 입력하세요.')
+        }else if(num!==1234){
+            alert('비밀번호를 확인하세요.')
+        }
+        // !num : num자리가 비어있다. num!==12 : num이 12가 아니다.
+    }
+        
+
+         
+    </script>
+</body>
+</html>

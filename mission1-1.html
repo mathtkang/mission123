@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>mission1</title>
+</head>
+<body>
+    <script>
+    var a = prompt("숫자를 입력하세요.");
+    if(a%3==0){
+        document.write(a+"는 3의 배수가 맞습니다.");
+    }else{
+        document.write(a+"는 3의 배수가 아닙니다.");
+    }
+
+    // document.write : 태그들을 지우고 틈을 밀고 새로 입히는 것
+    // innerText : 지정한 객체에 새로운 text만 입력
+
+    // <body>
+    //     <div>1</div>
+    //     <div>2</div>
+    // </body>
+
+    // 위와 같이 태그가 구성되어 있다면
+    // document.write('hi') 호출 시 기존 태그들은 모두 사라지고  hi 글자만 남게 됩니다 -> 개발자도구 Elements 탭에서 확인 가능
+    // 하지만 document.querySelector('div').innerText = "hi"
+    // 또는 document.querySelector('div:first-child').innerText = "hi"
+    // 이렇게 호출한다면 기존 태그들은 그대로 있고 첫번째 div의 텍스트만 1에서 hi로 변경되지용
+
+    // 참고로 실무에서 document.write() 쓰는 경우는 없습니다! 힘들게 html태그 작업할 걸 날릴 이유는 없으니깐용
+    // 어디까지나 자바스크립트 연습용으로만 document.write()를 사용합니당...!
+
+    
+
+    </script>
+</body>
+</html>

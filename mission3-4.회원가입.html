@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>회원가입</title>
+</head>
+<body> 
+    <!-- 아이디와 비밀번호 길이가 각각 5 이하일 때만 회원가입이 가능합니다. -->
+    <!-- length 속성을 사용해 검사 버튼을 클릭할 때 회원가입 가능 여부를 판단하는 기능을 구현하세요. -->
+    <!-- 단, else if 를 사용하지 않고 오직 if와 else만 사용합니다. (중첩 if 가능) -->
+    <input type="text" placeholder="아이디" id="userId">
+    <input type="password" placeholder="비밀번호" id="userPwd">
+    <button onclick="buttonClick()">검사</button>
+    <script>
+        function buttonClick(){
+        var idvalue = document.querySelector("#userId").value
+        var pwdvalue = document.querySelector("#userPwd").value
+            if(!idvalue || !pwdvalue){ //질문1) idvalue.length==0 || pwdvalue.length==0 는 왜 안되나용?
+                alert('아이디 또는 비밀번호를 입력하세요')
+            }
+            if(idvalue.length>5){
+                alert('아이디 길이가 5 초과')
+            }
+            if(pwdvalue.length>5){
+                alert('비밀번호 길이가 5 초과')
+            }
+            if(idvalue.length<=5 && pwdvalue.length<=5){ 
+                // 질문2) 이게 계속 나오는 이유가 아이디=3/비밀번호=4로 입력되서 그런거 같은데
+                // 그렇게 입력 안되도록 어떻게 할지 모르겠습니다
+                alert('회원가입 성공')
+            }
+        }
+        // 아이디 또는 비밀번호를 입력하지 않음: alert('아이디 또는 비밀번호를 입력하세요')
+        // 아이디 길이가 5 초과: alert('아이디 길이가 5 초과')
+        // 비밀번호 길이가 5 초과: alert('비밀번호 길이가 5 초과')
+        // 아이디, 비밀번호 길이가 모두 5 이하: alert('회원가입 성공')
+        
+    </script>
+</body>
+</html>
